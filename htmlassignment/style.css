@@ -1,0 +1,145 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #cce6f4 url("images/texture.png") repeat;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+header .logo {
+  height: 80px;
+  display: block;
+  margin: 0 auto 10px;
+}
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  color: #0073b7;
+  text-shadow: 1px 1px 2px white;
+}
+
+/* Navigation */
+nav {
+  background: #0099cc;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0 5px;
+  position: relative;
+}
+nav a {
+  display: block;
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Arrow above each tab */
+nav a::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #ff6600;
+}
+
+/* Hover effect */
+nav a:hover {
+  background: linear-gradient(to bottom, #ff944d, #ff6600);
+  transform: translateY(-3px);
+}
+nav a:hover::before {
+  display: none; /* arrow disappears */
+}
+
+/* Banner */
+.banner {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.banner img {
+  max-width: 100%;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Main Content */
+main {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+main h2 {
+  color: #0099cc;
+  margin-bottom: 10px;
+}
+main p {
+  margin-bottom: 20px;
+}
+
+/* Columns inside main */
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.column {
+  width: 45%;
+}
+.column h3 {
+  color: #0099cc;
+  margin-bottom: 10px;
+}
+.column ul {
+  list-style: none;
+}
+.column li {
+  margin-bottom: 8px;
+}
+.column a {
+  color: #ff6600;
+  text-decoration: none;
+}
+.column a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #0099cc;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  border-radius: 0 0 8px 8px;
+}
